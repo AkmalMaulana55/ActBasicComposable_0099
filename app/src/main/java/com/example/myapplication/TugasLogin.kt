@@ -29,5 +29,74 @@ fun TugasLogin(modifier: Modifier = Modifier) {
     val gambar2 = painterResource(id = R.drawable.gambar2)
     val gambar3 = painterResource(id = R.drawable.gambar3)
 
+    Box(modifier = modifier.fillMaxSize()) {
+        Image(
+            painter = gambar1,
+            contentDescription = null,
+            modifier = Modifier.fillMaxSize(),
+            contentScale = ContentScale.Crop
+        )
 
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(top = 20.dp),
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            Text(
+                text = "Login",
+                fontSize = 32.sp,
+                fontWeight = FontWeight.Bold,
+                color = Color.Blue
+            )
+            Text(
+                text = "Ini adalah halaman login,",
+                fontSize = 14.sp,
+                color = Color.White
+            )
+
+            Spacer(modifier = Modifier.height(40.dp))
+
+            Image(
+                painter = gambar2,
+                contentDescription = null,
+                modifier = Modifier.size(150.dp),
+                contentScale = ContentScale.Fit
+            )
+
+            Spacer(modifier = Modifier.height(50.dp))
+
+            Text(
+                text = "Nama",
+                fontSize = 14.sp,
+                fontWeight = FontWeight.Bold,
+                color = Color.Red
+            )
+            Text(
+                text = "Muhammad Akmal Maulana",
+                fontSize = 16.sp,
+                fontWeight = FontWeight.Bold,
+                color = Color.Blue
+            )
+            Text(
+                text = "20240140099",
+                fontSize = 24.sp,
+                fontWeight = FontWeight.Bold,
+                color = Color.Black
+            )
+
+            Spacer(modifier = Modifier.height(10.dp))
+
+            Image(
+                painter = gambar3,
+                contentDescription = null,
+                modifier = Modifier
+                    .size(290.dp)
+                    .clip(CircleShape)
+                    .border(width = 4.dp, color = Color.White, shape = CircleShape)
+                    .background(Color(0xFFE6E6F2)),
+                contentScale = ContentScale.Fit
+            )
+        }
+    }
 }
