@@ -34,3 +34,16 @@ fun contohColumn(modifier: Modifier) {
         Text("word")
     }
 }
+
+@Composable
+fun contohRow(modifier: Modifier) {
+    Row(
+        modifier = modifier
+            .padding(top = 60.dp, start = 60.dp)
+            .fillMaxWidth()
+    ) {
+        Text(text = "Helo")
+        Text(text = "Kota")
+    }
+}
+
