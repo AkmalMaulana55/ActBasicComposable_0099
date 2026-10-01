@@ -16,9 +16,12 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.Shadow
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -28,6 +31,15 @@ fun TugasLogin(modifier: Modifier = Modifier) {
     val gambar1 = painterResource(id = R.drawable.gambar1)
     val gambar2 = painterResource(id = R.drawable.gambar2)
     val gambar3 = painterResource(id = R.drawable.gambar3)
+
+    // Warna teks biar kebaca di atas poster gelap
+    val emas = Color(0xFFFFD54F)
+    val putih = Color.White
+    val bayangan = Shadow(
+        color = Color.Black,
+        offset = Offset(3f, 3f),
+        blurRadius = 8f
+    )
 
     Box(modifier = modifier.fillMaxSize()) {
         Image(
@@ -40,19 +52,21 @@ fun TugasLogin(modifier: Modifier = Modifier) {
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(top = 20.dp),
+                .padding(top = 40.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Text(
                 text = "Login",
                 fontSize = 32.sp,
                 fontWeight = FontWeight.Bold,
-                color = Color.Blue
+                color = emas,
+                style = TextStyle(shadow = bayangan)
             )
             Text(
                 text = "Ini adalah halaman login,",
                 fontSize = 14.sp,
-                color = Color.White
+                color = putih,
+                style = TextStyle(shadow = bayangan)
             )
 
             Spacer(modifier = Modifier.height(40.dp))
@@ -70,19 +84,22 @@ fun TugasLogin(modifier: Modifier = Modifier) {
                 text = "Nama",
                 fontSize = 14.sp,
                 fontWeight = FontWeight.Bold,
-                color = Color.Red
+                color = emas,
+                style = TextStyle(shadow = bayangan)
             )
             Text(
                 text = "Muhammad Akmal Maulana",
                 fontSize = 16.sp,
                 fontWeight = FontWeight.Bold,
-                color = Color.Blue
+                color = putih,
+                style = TextStyle(shadow = bayangan)
             )
             Text(
                 text = "20240140099",
                 fontSize = 24.sp,
                 fontWeight = FontWeight.Bold,
-                color = Color.Black
+                color = putih,
+                style = TextStyle(shadow = bayangan)
             )
 
             Spacer(modifier = Modifier.height(10.dp))
@@ -94,8 +111,8 @@ fun TugasLogin(modifier: Modifier = Modifier) {
                     .size(290.dp)
                     .clip(CircleShape)
                     .border(width = 4.dp, color = Color.White, shape = CircleShape)
-                    .background(Color(0xFFE6E6F2)),
-                contentScale = ContentScale.Fit
+                    .background(Color.Black),
+                contentScale = ContentScale.Crop
             )
         }
     }
