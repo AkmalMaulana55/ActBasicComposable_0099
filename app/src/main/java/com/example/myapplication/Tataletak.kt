@@ -58,3 +58,13 @@ fun TataletakColumn(modifier: Modifier) {
         Text(text = "Komponen4")
     }
 }
+
+@Composable
+fun TataletakRow(modifier: Modifier) {
+    Row(modifier = modifier.fillMaxWidth()) {
+        Text(text = "Komponen1")
+        Text(text = "Komponen2")
+        Text(text = "Komponen3")
+        Text(text = "Komponen4")
+    }
+}
