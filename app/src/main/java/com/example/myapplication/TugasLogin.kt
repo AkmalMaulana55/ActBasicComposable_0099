@@ -22,3 +22,12 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+
+@Composable
+fun TugasLogin(modifier: Modifier = Modifier) {
+    val gambar1 = painterResource(id = R.drawable.gambar1)
+    val gambar2 = painterResource(id = R.drawable.gambar2)
+    val gambar3 = painterResource(id = R.drawable.gambar3)
+
+
+}
